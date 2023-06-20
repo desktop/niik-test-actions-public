@@ -1,0 +1,10 @@
+name: reuse-external
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: desktop/niik-test-actions-receiver/.github/workflows/ci.yml@main
+    secrets:
+      SSH_PRIVATE_KEY: "foo"
